@@ -15,8 +15,8 @@ highlight Normal ctermfg=grey ctermbg=black
 
 set ruler
 set title
-set number
 set relativenumber
+set number
 
 "map the <esc> key
 inoremap jk <esc>
@@ -84,3 +84,7 @@ augroup END
 
 "change mapleader
 let mapleader = ","
+
+"Ctr-j to insert blank in space below, and Ctrl-k in below
+nnoremap <C-J> mao<Esc>`a
+nnoremap <C-K> maO<Esc>`a
