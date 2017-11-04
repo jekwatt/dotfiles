@@ -1,4 +1,4 @@
-# added by Miniconda3 4.0.5 installer
+# Added by Miniconda3 4.0.5 installer
 export PATH="/Users/JENNIFER/miniconda3/bin:$PATH"
 
 export PATH="~/bin:${PATH}"
@@ -16,3 +16,5 @@ fi
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# Clear the screen and scroll-back
+alias clr="clear && printf '\e[3J'"
