@@ -17,8 +17,8 @@ export HISTCONTROL="ignorespace:ignoredups"
 export HISTCONTROL="ignoreboth"
 
 # Set to unlimited bash history
-export HISTSIZE=-1
-export HISTFILESIZE=-1
+HISTSIZE=100000000
+HISTFILESIZE=$HISTSIZE
 
 # Set to simple terminal prompt
 # PS1="$(tput setaf 166)\u@\h \W -> $(tput sgr0)";
