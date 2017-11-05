@@ -17,4 +17,4 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # Clear the screen and scroll-back
-alias clr="clear && printf '\e[3J'"
+# alias clr="clear && printf '\e[3J'"
