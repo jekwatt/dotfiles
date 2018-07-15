@@ -18,3 +18,6 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # Clear the screen and scroll-back
 # alias clr="clear && printf '\e[3J'"
+
+# added by Anaconda3 5.1.0 installer
+export PATH="/Users/JENNIFER/anaconda3/bin:$PATH"
