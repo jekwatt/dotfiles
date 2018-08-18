@@ -20,8 +20,6 @@ highlight Normal ctermfg=grey ctermbg=black
 
 set ruler
 set title
-set relativenumber
-set number
 
 "map the <esc> key
 inoremap jk <esc>
