@@ -96,12 +96,21 @@ augroup MarkMargin
     autocmd  BufEnter  *.vp*   :call MarkMargin(0)
 augroup END
 
-"change mapleader
-let mapleader = ","
 " leader-j to insert blank in space below, and leader-k in below
 nnoremap <leader>j mao<Esc>`a
 nnoremap <leader>k maO<Esc>`a
 
+" Execute a command and show it's output in a split window
+command! -nargs=* -complete=shellcmd Rsplit execute "new | r! <args>"
+
+" Execute a command and show it's output in a new tab
+command! -nargs=* -complete=shellcmd Rtab execute "tabnew | r! <args>"
+
+" Vertically-split windows to open to the right
+set splitright
+
+" All splits open below the current window
+set splitbelow
 
 " See white spaces
 set list listchars=tab:»·,trail:·
