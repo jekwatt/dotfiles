@@ -50,7 +50,10 @@ vno <up> <Nop>
 
 set virtualedit=onemore
 
-"quick pairs
+" Change mapleader
+let mapleader = ","
+
+" Quick pairs
 imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
@@ -95,9 +98,10 @@ augroup END
 
 "change mapleader
 let mapleader = ","
+" leader-j to insert blank in space below, and leader-k in below
+nnoremap <leader>j mao<Esc>`a
+nnoremap <leader>k maO<Esc>`a
 
-"Ctr-j to insert blank in space below, and Ctrl-k in below
-nnoremap <C-J> mao<Esc>`a
-nnoremap <C-K> maO<Esc>`a
+
 " See white spaces
 set list listchars=tab:»·,trail:·
