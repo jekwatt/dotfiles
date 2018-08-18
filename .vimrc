@@ -3,7 +3,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-"start of my .vimrc
+" Start of my .vimrc
 set laststatus=2
 set smartindent
 set tabstop=4
@@ -45,22 +45,21 @@ imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 
 set showcmd
-filetype plugin indent on
 set wildmenu
 
-"use repeat operator with a visual selection
+" Use repeat operator with a visual selection
 vnoremap . :normal .<cr>
 set hlsearch
 set smartcase
 set incsearch
 
-"split navigations
+" Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"show when lines extend past column 80
+" Show when lines extend past column 80
 highlight ColorColumn ctermfg=208 ctermbg=Black
 
 function! MarkMargin (on)
@@ -88,3 +87,5 @@ let mapleader = ","
 "Ctr-j to insert blank in space below, and Ctrl-k in below
 nnoremap <C-J> mao<Esc>`a
 nnoremap <C-K> maO<Esc>`a
+" See white spaces
+set list listchars=tab:»·,trail:·
