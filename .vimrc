@@ -1,4 +1,9 @@
-"pathogen plugin
+" Basic setup
+
+" Enter the current millennium
+set nocompatible
+
+" Enable syntax and plugins
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
