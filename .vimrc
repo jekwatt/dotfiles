@@ -21,19 +21,20 @@ highlight Normal ctermfg=grey ctermbg=black
 set ruler
 set title
 
-"map the <esc> key
-inoremap jk <esc>
-inoremap <esc> <nop>
 " Set hybrid numbers
 set number relativenumber
 
-"unmap the arrow keys
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
+" Map the <esc> key
+inoremap jk <ESC>
+inoremap <ESC> <Nop>
+
+" Unmap the arrow keys
 no <down> ddp
 no <left> <Nop>
 no <right> <Nop>
