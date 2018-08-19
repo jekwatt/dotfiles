@@ -1,9 +1,14 @@
-"pathogen plugin
+" Basic setup
+
+" Enter the current millennium
+set nocompatible
+
+" Enable syntax and plugins
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-"start of my .vimrc
+" Start of my .vimrc
 set laststatus=2
 set smartindent
 set tabstop=4
@@ -15,14 +20,21 @@ highlight Normal ctermfg=grey ctermbg=black
 
 set ruler
 set title
-set relativenumber
-set number
 
-"map the <esc> key
-inoremap jk <esc>
-inoremap <esc> <nop>
+" Set hybrid numbers
+set number relativenumber
 
-"unmap the arrow keys
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" Map the <esc> key
+inoremap jk <ESC>
+inoremap <ESC> <Nop>
+
+" Unmap the arrow keys
 no <down> ddp
 no <left> <Nop>
 no <right> <Nop>
@@ -38,29 +50,31 @@ vno <up> <Nop>
 
 set virtualedit=onemore
 
-"quick pairs
+" Change mapleader
+let mapleader = ","
+
+" Quick pairs
 imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 
 set showcmd
-filetype plugin indent on
 set wildmenu
 
-"use repeat operator with a visual selection
+" Use repeat operator with a visual selection
 vnoremap . :normal .<cr>
 set hlsearch
 set smartcase
 set incsearch
 
-"split navigations
+" Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"show when lines extend past column 80
+" Show when lines extend past column 80
 highlight ColorColumn ctermfg=208 ctermbg=Black
 
 function! MarkMargin (on)
@@ -82,9 +96,21 @@ augroup MarkMargin
     autocmd  BufEnter  *.vp*   :call MarkMargin(0)
 augroup END
 
-"change mapleader
-let mapleader = ","
+" leader-j to insert blank in space below, and leader-k in below
+nnoremap <leader>j mao<Esc>`a
+nnoremap <leader>k maO<Esc>`a
 
-"Ctr-j to insert blank in space below, and Ctrl-k in below
-nnoremap <C-J> mao<Esc>`a
-nnoremap <C-K> maO<Esc>`a
+" Execute a command and show it's output in a split window
+command! -nargs=* -complete=shellcmd Rsplit execute "new | r! <args>"
+
+" Execute a command and show it's output in a new tab
+command! -nargs=* -complete=shellcmd Rtab execute "tabnew | r! <args>"
+
+" Vertically-split windows to open to the right
+set splitright
+
+" All splits open below the current window
+set splitbelow
+
+" See white spaces
+set list listchars=tab:»·,trail:·
