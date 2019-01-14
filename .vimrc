@@ -4,7 +4,7 @@
 set nocompatible
 
 " Enable syntax and plugins
-execute pathogen#infect()
+" execute pathogen#infect() # TODO download pathogen
 syntax on
 filetype plugin indent on
 
