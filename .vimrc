@@ -32,7 +32,7 @@ augroup END
 
 " Map the <esc> key
 inoremap jk <ESC>
-inoremap <ESC> <Nop>
+" inoremap <ESC> <Nop>
 
 " Unmap the arrow keys
 no <down> ddp
