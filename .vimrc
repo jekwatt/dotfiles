@@ -120,3 +120,6 @@ set t_BE=
 
 " Set maximum number of lines saved in a register between sessions
 set viminfo='20,<1000
+
+" Set VIM to use system clipboard
+" set clipboard=unnamed
