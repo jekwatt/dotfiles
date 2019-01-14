@@ -117,3 +117,6 @@ set list listchars=tab:»·,trail:·
 
 " To turn off bracketed paste mode
 set t_BE=
+
+" Set maximum number of lines saved in a register between sessions
+set viminfo='20,<1000
