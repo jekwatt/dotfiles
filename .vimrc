@@ -114,3 +114,6 @@ set splitbelow
 
 " See white spaces
 set list listchars=tab:»·,trail:·
+
+" To turn off bracketed paste mode
+set t_BE=
