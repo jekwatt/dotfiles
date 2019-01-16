@@ -123,3 +123,6 @@ set viminfo='20,<1000
 
 " Set VIM to use system clipboard
 " set clipboard=unnamed
+
+" Display completion matches on your status line
+set wildmenu
