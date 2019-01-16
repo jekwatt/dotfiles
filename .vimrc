@@ -126,3 +126,6 @@ set viminfo='20,<1000
 
 " Display completion matches on your status line
 set wildmenu
+
+" Show a few lines of context around the cursor
+set scrolloff=5
