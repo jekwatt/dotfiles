@@ -4,7 +4,7 @@
 set nocompatible
 
 " Enable syntax and plugins
-execute pathogen#infect()
+" execute pathogen#infect() # TODO download pathogen
 syntax on
 filetype plugin indent on
 
@@ -32,7 +32,7 @@ augroup END
 
 " Map the <esc> key
 inoremap jk <ESC>
-inoremap <ESC> <Nop>
+" inoremap <ESC> <Nop>
 
 " Unmap the arrow keys
 no <down> ddp
@@ -114,3 +114,18 @@ set splitbelow
 
 " See white spaces
 set list listchars=tab:»·,trail:·
+
+" To turn off bracketed paste mode
+set t_BE=
+
+" Set maximum number of lines saved in a register between sessions
+set viminfo='20,<1000
+
+" Set VIM to use system clipboard
+" set clipboard=unnamed
+
+" Display completion matches on your status line
+set wildmenu
+
+" Show a few lines of context around the cursor
+set scrolloff=5
