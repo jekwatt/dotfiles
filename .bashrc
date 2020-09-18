@@ -1,13 +1,4 @@
- 
-# User specific aliases and functions
-alias ls='ls -G'
-#alias ls="ls --color -l" 
 # .bashrc
- 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
-fi
 
 # sbiddle advanced history
 export HISTIGNORE="clear:history"
