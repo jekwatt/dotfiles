@@ -44,3 +44,9 @@ PS1+="\n"; # add new line
 PS1+="\[${gray}\]-> \[${reset}\]"; # '$' (and reset color)
 # PS1+="\[${black}\]\$ \[${reset}\]"; # '$' (and reset color)
 export PS1;
+
+# Navigate upwards only
+up ()
+{
+        cd $(python -c "print('../'*${1:-1})")
+    }
