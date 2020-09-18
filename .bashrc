@@ -13,13 +13,18 @@ fi
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignorespace:ignoredups"
 
-# Ignore same sucessive entries
+# Ignore same successive entries
 export HISTCONTROL="ignoreboth"
 
 # Set to unlimited bash history
 HISTSIZE=100000000
 HISTFILESIZE=$HISTSIZE
 
+# Enhanced bash completion on macOS
+# This makes `git` much nicer
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
+fi
 
 # Color
 orange=$(tput setaf 166);
