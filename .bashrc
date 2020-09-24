@@ -54,7 +54,7 @@ export PS1;
 # Uncomment to use
 # export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-# navigate upwards only
+# Navigate upwards only
 up ()
 {
         cd $(python -c "print('../'*${1:-1})")
