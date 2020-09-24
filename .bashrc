@@ -17,6 +17,11 @@ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
     . /opt/local/etc/profile.d/bash_completion.sh
 fi
 
+# Git branch in prompt
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 # Color
 orange=$(tput setaf 166);
 red=$(tput setaf 160);
@@ -40,6 +45,9 @@ PS1+="\n"; # add new line
 PS1+="\[${gray}\]-> \[${reset}\]"; # '$' (and reset color)
 # PS1+="\[${black}\]\$ \[${reset}\]"; # '$' (and reset color)
 export PS1;
+
+# Uncomment to use
+# export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # navigate upwards only
 up ()
