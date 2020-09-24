@@ -23,16 +23,20 @@ parse_git_branch() {
 }
 
 # Color
-orange=$(tput setaf 166);
-red=$(tput setaf 160);
-pink=$(tput setaf 168);
-yellow=$(tput setaf 228);
-green=$(tput setaf 71);
-blue=$(tput setaf 60);
-black=$(tput setaf 16);
-gray=$(tput setaf 235);
 bold=$(tput bold);
 reset=$(tput sgr0);
+black=$(tput setaf 16);
+blue=$(tput setaf 33);
+cyan=$(tput setaf 37);
+gray=$(tput setaf 235);
+green=$(tput setaf 71);
+orange=$(tput setaf 166);
+pink=$(tput setaf 168);
+purple=$(tput setaf 128);
+red=$(tput setaf 124);
+violet=$(tput setaf 61);
+white=$(tput setaf 15);
+yellow=$(tput setaf 228);
 
 # Custom terminal setting
 PS1="\[${bold}\]\n";
