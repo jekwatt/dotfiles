@@ -1,6 +1,6 @@
 # .bashrc
 
-# sbiddle advanced history
+# Sbiddle advanced history
 export HISTIGNORE="clear:history"
 export HISTCONTROL="ignorespace:ignoredups"
 
@@ -41,7 +41,7 @@ PS1+="\[${gray}\]-> \[${reset}\]"; # '$' (and reset color)
 # PS1+="\[${black}\]\$ \[${reset}\]"; # '$' (and reset color)
 export PS1;
 
-# Navigate upwards only
+# navigate upwards only
 up ()
 {
         cd $(python -c "print('../'*${1:-1})")
