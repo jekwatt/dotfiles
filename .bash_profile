@@ -13,13 +13,6 @@ export PATH="/Users/jwatt/bin:$PATH"
 # add chromedriver for pytest automation
 export PATH="/Users/jwatt/drivers:$PATH"
 
-# Git branch in prompt
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
 # __conda_setup="$('/Users/jwatt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
