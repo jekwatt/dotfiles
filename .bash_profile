@@ -40,10 +40,10 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 # conda deactivate  # protect miniconda3 environment from change
 # conda activate anaconda3
 
-# # Load .bashrc if interactive and exists.
-# if [[ -f ~/.bashrc ]] && [[ "$PS1" ]]; then
-#     source ~/.bashrc
-# fi
+# Load .bashrc if interactive and exists.
+if [[ -f ~/.bashrc ]] && [[ "$PS1" ]]; then
+    source ~/.bashrc
+fi
 
 # 2020-05-14: jw set up new_base_env (base_a)
 source ~/conda/base/etc/profile.d/conda.sh
