@@ -39,13 +39,13 @@ white=$(tput setaf 15);
 yellow=$(tput setaf 228);
 
 # Set the terminal title and prompt
-PS1="\[\033]0;\w\007\]";  # working directory full name
+PS1="\[${cyan}\]\W ";     # working directory base name
 PS1+="\n";                # new line
 PS1+="\[${pink}\]\u";     # user name
 PS1+="\[${gray}\] at ";
 PS1+="\[${violet}\]\h";   # host
 PS1+="\[${gray}\] in ";
-PS1+="\[${cyan}\]\W ";    # working directory base name
+PS1+="\[${cyan}\]\w ";    # working directory full name
 PS1+="\[${purple}\]\$(parse_git_branch) ";  # git branch
 PS1+="\n";                # new line
 PS1+="\[${yellow}\]=> \[${reset}\]"; # '->' (and reset color)
