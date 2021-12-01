@@ -7,10 +7,10 @@ export PATH=/opt/local/bin:"$PATH"
 # added by Anaconda3 5.0.1 installer
 # export PATH="/Users/jwatt/anaconda3/bin:$PATH"  # commented out by conda initialize
 
-# add my local /User/jwatt/bin to the PATH Environment variables
+# Add my local /User/jwatt/bin to the PATH Environment variables
 export PATH="/Users/jwatt/bin:$PATH"
 
-# add chromedriver for pytest automation
+# Add chromedriver for pytest automation
 export PATH="/Users/jwatt/drivers:$PATH"
 
 # # >>> conda initialize >>>
@@ -32,8 +32,7 @@ export PATH="/Users/jwatt/drivers:$PATH"
 # source ~/conda/envs/miniconda3/bin/activate
 # conda deactivate  # protect miniconda3 environment from change
 # conda activate anaconda3
-
-# Load .bashrc if interactive and exists.
+# Load .bashrc if interactive and exists
 if [[ -f ~/.bashrc ]] && [[ "$PS1" ]]; then
     source ~/.bashrc
 fi
