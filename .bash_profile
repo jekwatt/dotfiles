@@ -1,5 +1,10 @@
-export PATH=/opt/local/bin:"$PATH"
+# Add standard conda environment
+export PATH=~/conda/envs/main/bin:~/conda/envs/unix/bin:"$PATH"
 
+# Same as the above
+# PATH=~/conda/envs/unix/bin:"$PATH"
+# PATH=~/conda/envs/main/bin:"$PATH"
+# export PATH
 
 # Add my local /User/jwatt/bin to the PATH Environment variables
 export PATH="/Users/jwatt/bin:$PATH"
@@ -13,6 +18,5 @@ if [[ -f ~/.bashrc ]] && [[ "$PS1" ]]; then
 fi
 
 # 2020-05-14: jw set up new_base_env (base_a)
-source ~/conda/base/etc/profile.d/conda.sh
-conda activate base
-
+# 2021-11-04: wh switched to dedicated conda environment
+source ~/conda/envs/conda/etc/profile.d/conda.sh
