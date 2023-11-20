@@ -1,9 +1,2 @@
 channels:
-  - conda-forge
   - bioconda
-  - defaults
-envs_dirs:
-  - ~/conda/envs
-pkgs_dirs:
-  - ~/conda/pkgs
-ssl_verify: true
