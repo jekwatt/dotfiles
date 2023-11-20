@@ -9,3 +9,4 @@ tmp/
 *~
 ~$*.xlsx
 .ipynb_checkpoints
+.env
