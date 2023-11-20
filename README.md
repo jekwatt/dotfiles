@@ -1,3 +1,3 @@
 # dotfiles
 
-My dotfiles in sync with my MacBook Pro.
+My dotfiles in sync with my new MacBook Pro 2023 14".
