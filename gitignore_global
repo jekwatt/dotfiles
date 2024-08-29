@@ -1,11 +1,7 @@
 .DS_Store
-/local
-*/local
+local/
 tmp/
-# 2022-07-29
-# echo .vscode/ >> .git/info/exclude
-.vscode
-.vscode/*
+.vscode/
 *~
 ~$*.xlsx
 .ipynb_checkpoints
